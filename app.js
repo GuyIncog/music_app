@@ -101,6 +101,7 @@ const scaleMap = {
   wholeTone: ["Whole Tone"],
 };
 
+// This object is used to populate activeNotes for highlight()
 const scalesAndModes = {
   major: {
     "Ionion / Maj.": [1, , 3, , 5, 6, , 8, , 10, , 12],
@@ -151,6 +152,7 @@ const scalesAndModes = {
   },
 };
 
+// Mode dropdown menu highlights new scale when updated.
 const modeList = document.querySelector("#mode");
 let currentMode;
 modeList.addEventListener("change", () => {
@@ -158,11 +160,8 @@ modeList.addEventListener("change", () => {
   highlight();
 });
 
-// Links mode dropdown menu to set currentMode for highlight function.
-// Populates or repopulates modeList based on selected scale family.
-const scaleList = document.querySelector("#scale");
-let currentScale;
-scaleList.addEventListener("change", () => {
+// Function to remove modeList options and repopulate based on the currentScale
+const modePopulate = () => {
   currentScale = scaleList.value;
   modeList.innerHTML = '<option disabled="" selected="">Mode</option>'; // Empties modeList before repopulating.
   for (x of scaleMap[currentScale]) {
@@ -171,7 +170,12 @@ scaleList.addEventListener("change", () => {
     option.value = x;
     modeList.appendChild(option);
   }
-});
+};
+
+// currentScale updates when changed in dropdown menu
+const scaleList = document.querySelector("#scale");
+let currentScale;
+scaleList.addEventListener("change", modePopulate);
 
 // Main function to highlight the selected scale based on all 3 dropdown menus
 const highlight = () => {
@@ -200,13 +204,32 @@ const highlight = () => {
     }
 
     // This adds the .root class to make the root note a different color
+    // .root class must come after .active in the css so that it takes precedence
     let rootNote = document.querySelectorAll(`.${currentKey}`);
     for (let y of rootNote) {
-      y.classList.remove("active");
       y.classList.add("root");
     }
   }
 };
 
-const updateBtn = document.querySelector("#updateBtn");
-updateBtn.addEventListener("click", highlight);
+const highlightBtn = document.querySelector("#highlightBtn");
+highlightBtn.addEventListener("click", highlight);
+
+// When random button is clicked, a random key, scale, and mode are chosen, and then highlighted.
+const randBtn = document.querySelector("#randBtn");
+randBtn.addEventListener("click", () => {
+  const random = (x) => {
+    return x[Math.floor(Math.random() * (x.length - 1)) + 1].value;
+  };
+
+  keyList.value = random(keyList);
+  currentKey = keyList.value;
+
+  scaleList.value = random(scaleList);
+  modePopulate();
+
+  modeList.value = random(modeList);
+  currentMode = modeList.value;
+
+  highlight();
+});
