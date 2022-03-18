@@ -104,51 +104,51 @@ const scaleMap = {
 // This object is used to populate activeNotes for highlight()
 const scalesAndModes = {
   major: {
-    "Ionion / Maj.": [1, , 3, , 5, 6, , 8, , 10, , 12],
-    Dorian: [1, , 3, 4, , 6, , 8, , 10, 11],
-    Phrygian: [1, 2, , 4, , 6, , 8, 9, , 11],
-    Lydian: [1, , 3, , 5, , 7, 8, , 10, , 12],
-    Mixolydian: [1, , 3, , 5, 6, , 8, , 10, 11],
-    "Aeolian / Nat. Min.": [1, , 3, 4, , 6, , 8, 9, , 11],
-    Locrian: [1, 2, , 4, , 6, 7, , 9, , 11],
+    "Ionion / Maj.": [1, 3, 5, 6, 8, 10, 12],
+    Dorian: [1, 3, 4, 6, 8, 10, 11],
+    Phrygian: [1, 2, 4, 6, 8, 9, 11],
+    Lydian: [1, 3, 5, 7, 8, 10, 12],
+    Mixolydian: [1, 3, 5, 6, 8, 10, 11],
+    "Aeolian / Nat. Min.": [1, 3, 4, 6, 8, 9, 11],
+    Locrian: [1, 2, 4, 6, 7, 9, 11],
   },
   melodicMinor: {
-    "Mel. Min.": [1, , 3, 4, , 6, , 8, , 10, , 12],
-    "Dor. b2": [1, 2, , 4, , 6, , 8, , 10, 11],
-    "Lyd. aug.": [1, , 3, , 5, , 7, , 9, 10, , 12],
-    "Lyd. dom.": [1, , 3, , 5, , 7, 8, , 10, 11],
-    "Aeo. dom.": [1, , 3, , 5, 6, , 8, 9, , 11],
-    "Half dim.": [1, , 3, 4, , 6, 7, , 9, , 11],
-    "Alt.": [1, 2, , 4, 5, , 7, , 9, , 11],
+    "Mel. Min.": [1, 3, 4, 6, 8, 10, 12],
+    "Dor. b2": [1, 2, 4, 6, 8, 10, 11],
+    "Lyd. aug.": [1, 3, 5, 7, 9, 10, 12],
+    "Lyd. dom.": [1, 3, 5, 7, 8, 10, 11],
+    "Aeo. dom.": [1, 3, 5, 6, 8, 9, 11],
+    "Half dim.": [1, 3, 4, 6, 7, 9, 11],
+    "Alt.": [1, 2, 4, 5, 7, 9, 11],
   },
   harmonicMinor: {
-    "Harm. Min.": [1, , 3, 4, , 6, , 8, 9, , , 12],
-    "Locr. Nat.6": [1, 2, , 4, , 6, 7, , , 10, 11],
-    "Maj. #5": [1, , 3, , 5, 6, , , 9, 10, , 12],
-    "Dor. #4": [1, , 3, 4, , , 7, 8, , 10, 11],
-    "Phryg. dom.": [1, 2, , , 5, 6, , 8, 9, , 11],
-    "Lyd. #2": [1, , , 4, 5, , 7, 8, , 10, , 12],
-    "Alt. dom. bb7": [1, 2, , 4, 5, , 7, , 9, 10],
+    "Harm. Min.": [1, 3, 4, 6, 8, 9, 12],
+    "Locr. Nat.6": [1, 2, 4, 6, 7, 10, 11],
+    "Maj. #5": [1, 3, 5, 6, 9, 10, 12],
+    "Dor. #4": [1, 3, 4, 7, 8, 10, 11],
+    "Phryg. dom.": [1, 2, 5, 6, 8, 9, 11],
+    "Lyd. #2": [1, 4, 5, 7, 8, 10, 12],
+    "Alt. dom. bb7": [1, 2, 4, 5, 7, 9, 10],
   },
   harmonicMajor: {
-    "Harm. Maj.": [1, , 3, , 5, 6, , 8, 9, , , 12],
-    "Dor. b5": [1, , 3, 4, , 6, 7, , , 10, 11],
-    "Phryg. b4": [1, 2, , 4, 5, , , 8, 9, , 11],
-    "Lyd. b3": [1, , 3, 4, , , 7, 8, , 10, , 12],
-    "Mixo. b2": [1, 2, , , 5, 6, , 8, , 10, 11],
-    "Lyd. aug. #2": [1, , , 4, 5, , 7, , 9, 10, , 12],
-    "Loc. bb7": [1, 2, , 4, , 6, 7, , 9, 10],
+    "Harm. Maj.": [1, 3, 5, 6, 8, 9, 12],
+    "Dor. b5": [1, 3, 4, 6, 7, 10, 11],
+    "Phryg. b4": [1, 2, 4, 5, 8, 9, 11],
+    "Lyd. b3": [1, 3, 4, 7, 8, 10, 12],
+    "Mixo. b2": [1, 2, 5, 6, 8, 10, 11],
+    "Lyd. aug. #2": [1, 4, 5, 7, 9, 10, 12],
+    "Loc. bb7": [1, 2, 4, 6, 7, 9, 10],
   },
   diminished: {
-    "Dim.": [1, , 3, 4, , 6, 7, , 9, 10, , 12],
-    "Inv. Dim.": [1, 2, , 4, 5, , 7, 8, , 10, 11],
+    "Dim.": [1, 3, 4, 6, 7, 9, 10, 12],
+    "Inv. Dim.": [1, 2, 4, 5, 7, 8, 10, 11],
   },
   augmented: {
-    "Aug.": [1, , , 4, 5, , , 8, 9, , , 12],
-    "Inv. Aug.": [1, 2, , , 5, 6, , , 9, 10],
+    "Aug.": [1, 4, 5, 8, 9, 12],
+    "Inv. Aug.": [1, 2, 5, 6, 9, 10],
   },
   wholeTone: {
-    "Whole Tone": [1, , 3, , 5, , 7, , 9, , 11],
+    "Whole Tone": [1, 3, 5, 7, 9, 11],
   },
 };
 
@@ -190,9 +190,7 @@ const highlight = () => {
 
     // This for loop makes an array of the active notes in the current key/mode pair.
     for (let x of scalesAndModes[currentScale][currentMode]) {
-      if (x !== undefined) {
-        activeNotes.push(keyMap[currentKey][x - 1]);
-      }
+      activeNotes.push(keyMap[currentKey][x - 1]);
     }
 
     // This adds the active class to the selected notes
