@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Scales and Mode</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <h1>Learn Scales & Modes</h1>
+    <!-- <hr /> -->
+    <section class="supercontainer">
+      <div class="octave">
+        <section class="container">
+          <div class="spacer"></div>
+          <div class="black key db">C#<br />Db</div>
+          <div class="black key eb">D#<br />Eb</div>
+          <div class="none"></div>
+          <div class="black key gb">F#<br />Gb</div>
+          <div class="black key ab">G#<br />Ab</div>
+          <div class="black key bb">A#<br />Bb</div>
+          <div class="spacer"></div>
+        </section>
+        <section class="container">
+          <div class="white key c">C</div>
+          <div class="white key d">D</div>
+          <div class="white key e">E</div>
+          <div class="white key f">F</div>
+          <div class="white key g">G</div>
+          <div class="white key a">A</div>
+          <div class="white key b">B</div>
+        </section>
+      </div>
+      <div class="octave">
+        <section class="container">
+          <div class="spacer"></div>
+          <div class="black key db">C#<br />Db</div>
+          <div class="black key eb">D#<br />Eb</div>
+          <div class="none"></div>
+          <div class="black key gb">F#<br />Gb</div>
+          <div class="black key ab">G#<br />Ab</div>
+          <div class="black key bb">A#<br />Bb</div>
+          <div class="spacer"></div>
+        </section>
+        <section class="container">
+          <div class="white key c">C</div>
+          <div class="white key d">D</div>
+          <div class="white key e">E</div>
+          <div class="white key f">F</div>
+          <div class="white key g">G</div>
+          <div class="white key a">A</div>
+          <div class="white key b">B</div>
+        </section>
+      </div>
+    </section>
+    <div id="controls">
+      <div id="keyMenu">
+        <label for="key">Key</label>
+        <select name="key" id="key">
+          <option disabled selected>Choose Key</option>
+          <option value="a">A</option>
+          <option value="bb">A#/Bb</option>
+          <option value="b">B</option>
+          <option value="c">C</option>
+          <option value="db">C#/Db</option>
+          <option value="d">D</option>
+          <option value="eb">D#/Eb</option>
+          <option value="e">E</option>
+          <option value="f">F</option>
+          <option value="gb">F#/Gb</option>
+          <option value="g">G</option>
+          <option value="ab">G#/Ab</option>
+        </select>
+      </div>
+      <div id="scaleMenu">
+        <label for="scale">Scale Family</label>
+        <select name="scale" id="scale">
+          <option disabled selected>Scale Family</option>
+          <option value="major">Major</option>
+          <option value="melodicMinor">Melodic Minor</option>
+          <option value="harmonicMinor">Harmonic Minor</option>
+          <option value="harmonicMajor">Harmonic Major</option>
+          <option value="diminished">Diminished</option>
+          <option value="augmented">Augmented</option>
+          <option value="wholeTone">Whole Tone</option>
+        </select>
+      </div>
+      <div id="modeMenu">
+        <label for="mode">Mode</label>
+        <select name="mode" id="mode">
+          <option disabled selected>Mode</option>
+        </select>
+      </div>
+      <div>
+        <button id="highlightBtn">Highlight</button>
+      </div>
+      <div>
+        <button id="clear">Clear</button>
+      </div>
+      <div>
+        <button id="random">Random</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
