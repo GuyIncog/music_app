@@ -7,6 +7,8 @@ for (let key of keys) {
   });
 }
 
+const scaleNumbers = document.querySelector("#scalenumbers");
+
 // Remove all highlighter classes. Used by clear button and highlight()
 const clear = () => {
   for (let key of keys) {
@@ -14,6 +16,7 @@ const clear = () => {
     key.classList.remove("root");
     key.classList.remove("clicked");
   }
+  scaleNumbers.innerText = "";
 };
 
 // I don't know why I don't need the function parentheses for event listener, but I do outside of it.
@@ -191,7 +194,10 @@ const highlight = () => {
     // This for loop makes an array of the active notes in the current key/mode pair.
     for (let x of scalesAndModes[currentScale][currentMode]) {
       activeNotes.push(keyMap[currentKey][x - 1]);
+      scaleNumbers.innerText += ` ${x} - `;
     }
+
+    scaleNumbers.innerText = scaleNumbers.innerText.slice(0, -2);
 
     // This adds the active class to the selected notes
     for (let x of activeNotes) {
@@ -207,6 +213,9 @@ const highlight = () => {
     for (let y of rootNote) {
       y.classList.add("root");
     }
+
+    // document.querySelector("#scalenumbers").innerText =
+    //   scalesAndModes[currentScale][currentMode];
   }
 };
 

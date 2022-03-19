@@ -47,7 +47,7 @@ h1 {
 }
 
 /* Shared characteristics for white & black keys.
-Boarder-box allows changing border sizes not too mess up the math of the offset keys */
+Boarder-box allows changing border sizes not to mess up the math of the offset keys */
 .key {
   height: 100px;
   width: 40px;
@@ -87,16 +87,22 @@ Boarder-box allows changing border sizes not too mess up the math of the offset 
 }
 
 #controls {
-  /* display: flex; */
+  display: flex;
   box-sizing: border-box;
-  /* width: 100%; */
+  width: 100%;
   border: 3px solid gray;
   color: ivory;
 }
 
-#clear {
+#controls div {
   margin: 1em;
-  display: block;
+}
+
+#scalenumbers {
+  background-color: silver;
+  color: black;
+  width: 180px;
+  padding: 3px;
 }
 
 /* Highlights the non-root notes in the key. */
